@@ -10,26 +10,54 @@ body {
 
 /* En-tête / Bannière principale (L'image est UNIQUEMENT ici) */
 header {
-    /* Image + voile vert foncé appliqués uniquement sur le header */
-    background: linear-gradient(rgba(27, 77, 62, 0.8), rgba(27, 77, 62, 0.8)), url('arriere-plan.jpeg');
+    background: linear-gradient(rgba(27, 77, 62, 0.82), rgba(27, 77, 62, 0.82)), url('arriere-plan.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #ffffff;
-    padding: 50px 20px;
+    padding: 35px 20px 20px 20px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
 
+/* Alignement du logo et des titres */
+.header-branding {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Style du Logo */
+.site-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%; /* Rendu circulaire moderne */
+    border: 3px solid #f4d03f; /* Bordure dorée pour faire ressortir le logo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+}
+
 header h1 {
     margin: 0;
-    font-size: 2.4em;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    font-size: 2.2em;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 header p {
-    margin: 8px 0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    margin: 5px 0;
+    font-size: 1.1em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+header p.sub-title {
+    font-size: 0.95em;
+    opacity: 0.9;
 }
 
 /* Menu de navigation dans le header */
@@ -40,7 +68,7 @@ header nav ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
 }
 
 header nav ul li a {
@@ -49,13 +77,15 @@ header nav ul li a {
     font-weight: bold;
     padding: 8px 14px;
     border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.35); /* Petite boîte sombre derrière le texte */
-    transition: background-color 0.3s, color 0.3s;
+    background-color: rgba(0, 0, 0, 0.4); /* Boîte sombre derrière chaque lien */
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    display: inline-block;
 }
 
 header nav ul li a:hover {
     background-color: #f4d03f;
     color: #1b4d3e;
+    transform: translateY(-2px);
 }
 
 /* Conteneurs des sections (Fond blanc sur la page claire) */
