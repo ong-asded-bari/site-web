@@ -8,7 +8,7 @@ body {
     line-height: 1.6;
 }
 
-/* En-tête / Bannière principale (L'image est UNIQUEMENT ici) */
+/* En-tête / Bannière principale (L'image d'arrière-plan est UNIQUEMENT ici) */
 header {
     background: linear-gradient(rgba(27, 77, 62, 0.82), rgba(27, 77, 62, 0.82)), url('arriere-plan.jpeg');
     background-size: cover;
@@ -31,15 +31,18 @@ header {
     margin: 0 auto;
 }
 
-/* Style du Logo */
+/* Style du Logo ajusté (Ovale, grand et sans coupure) */
 .site-logo {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%; /* Rendu circulaire moderne */
-    border: 3px solid #f4d03f; /* Bordure dorée pour faire ressortir le logo */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: auto;
+    max-width: 230px;
+    height: auto;
+    max-height: 150px;
+    object-fit: contain;
     background-color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 3px solid #f4d03f;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 header h1 {
@@ -77,7 +80,7 @@ header nav ul li a {
     font-weight: bold;
     padding: 8px 14px;
     border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.4); /* Boîte sombre derrière chaque lien */
+    background-color: rgba(0, 0, 0, 0.4);
     transition: background-color 0.3s, color 0.3s, transform 0.2s;
     display: inline-block;
 }
@@ -88,7 +91,7 @@ header nav ul li a:hover {
     transform: translateY(-2px);
 }
 
-/* Conteneurs des sections (Fond blanc sur la page claire) */
+/* Conteneurs des sections */
 section {
     max-width: 1000px;
     margin: 30px auto;
