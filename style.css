@@ -109,6 +109,60 @@ hr {
     display: none; /* Masque les lignes simples HTML */
 }
 
+/* Galerie d'images - Projets */
+.galerie-projets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.carte-photo {
+    flex: 1 1 calc(50% - 20px);
+    max-width: 450px;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carte-photo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.carte-photo img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.carte-photo .legende {
+    padding: 10px 12px;
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+    margin: 0;
+    background-color: #fafafa;
+    border-top: 1px solid #eee;
+}
+
+/* Galerie Responsive sur Smartphone */
+@media (max-width: 600px) {
+    .carte-photo {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .carte-photo img {
+        height: 180px;
+    }
+}
+
 /* Pied de page */
 footer {
     text-align: center;
