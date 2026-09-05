@@ -14,9 +14,7 @@ header {
     color: #ffffff;
     padding: 20px;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    position: relative; /* Modifié : l'en-tête défile désormais normalement */
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
@@ -46,6 +44,36 @@ header nav ul li a {
 
 header nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Adaptation spécifique pour Écrans Mobiles (Smartphones) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 5px;
+    }
+    
+    header img {
+        max-height: 70px !important; /* Réduit la taille du logo sur téléphone */
+    }
+
+    header h1 {
+        font-size: 1.3em;
+    }
+
+    header p {
+        font-size: 0.85em;
+        margin: 4px 0;
+    }
+
+    header nav ul {
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    header nav ul li a {
+        font-size: 0.85em;
+        padding: 4px 6px;
+    }
 }
 
 /* Conteneurs des sections */
