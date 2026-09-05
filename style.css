@@ -3,64 +3,69 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('arriere-plan.jpeg'); 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-color: #f4f7f6;
+    background-color: #f4f7f6; /* Fond clair de la page */
     color: #333;
     line-height: 1.6;
 }
 
-/* En-tête / Navigation */
+/* En-tête / Bannière principale (L'image est UNIQUEMENT ici) */
 header {
-    background-color: #1b4d3e;
+    /* Image + voile vert foncé appliqués uniquement sur le header */
+    background: linear-gradient(rgba(27, 77, 62, 0.8), rgba(27, 77, 62, 0.8)), url('arriere-plan.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #ffffff;
-    padding: 20px;
+    padding: 50px 20px;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 2.4em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
+header p {
+    margin: 8px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* Menu de navigation dans le header */
 header nav ul {
     list-style: none;
     padding: 0;
-    margin: 15px 0 0 0;
+    margin: 25px 0 0 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 12px;
 }
 
 header nav ul li a {
-    color: #f4d03f;
+    color: #f4d03f; /* Jaune or */
     text-decoration: none;
     font-weight: bold;
-    padding: 5px 10px;
+    padding: 8px 14px;
     border-radius: 4px;
-    transition: background 0.3s;
+    background-color: rgba(0, 0, 0, 0.35); /* Petite boîte sombre derrière le texte */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #f4d03f;
+    color: #1b4d3e;
 }
 
-/* Conteneurs des sections */
+/* Conteneurs des sections (Fond blanc sur la page claire) */
 section {
     max-width: 1000px;
     margin: 30px auto;
-    background-color: rgba(255, 255, 255, 0.85);
+    background: #ffffff;
     padding: 25px 35px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 h2 {
@@ -80,10 +85,6 @@ ul {
 
 li {
     margin-bottom: 10px;
-}
-
-hr {
-    display: none;
 }
 
 /* Pied de page */
