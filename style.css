@@ -31,18 +31,18 @@ header {
     margin: 0 auto;
 }
 
-/* Style du Logo ajusté (Ovale, grand et sans coupure) */
+/* Style du Logo (Uniquement le logo, sans cadre ni fond blanc) */
 .site-logo {
     width: auto;
-    max-width: 230px;
+    max-width: 260px;
     height: auto;
-    max-height: 150px;
+    max-height: 160px;
     object-fit: contain;
-    background-color: #ffffff;
-    padding: 8px 16px;
-    border-radius: 50px;
-    border: 3px solid #f4d03f;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.6));
 }
 
 header h1 {
