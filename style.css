@@ -1,11 +1,9 @@
+/* Style Général */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    
-    /* Lien vers votre fichier image renommé */
     background-image: url('arriere-plan.jpeg'); 
-    
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -13,4 +11,86 @@ body {
     background-color: #f4f7f6;
     color: #333;
     line-height: 1.6;
+}
+
+/* En-tête / Navigation */
+header {
+    background-color: #1b4d3e;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header nav ul li a {
+    color: #f4d03f;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Conteneurs des sections */
+section {
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 25px 35px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #1b4d3e;
+    border-bottom: 3px solid #f4d03f;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+h3 {
+    color: #2c3e50;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+hr {
+    display: none;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1b4d3e;
+    color: #ffffff;
+    margin-top: 40px;
 }
