@@ -1,130 +1,176 @@
-/* Style Général */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Réinitialisation de base */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f7f6; /* Fond clair de la page */
-    color: #333;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #333333;
     line-height: 1.6;
 }
 
-/* En-tête / Bannière principale (L'image d'arrière-plan est UNIQUEMENT ici) */
-header {
-    background: linear-gradient(rgba(27, 77, 62, 0.82), rgba(27, 77, 62, 0.82)), url('arriere-plan.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+/* En-tête / Header avec fond d'image */
+.hero-header {
+    background: url('images/background.jpg') no-repeat center center/cover;
+    position: relative;
     color: #ffffff;
-    padding: 35px 20px 20px 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Alignement du logo et des titres */
-.header-branding {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    max-width: 900px;
-    margin: 0 auto;
+.overlay {
+    background-color: rgba(20, 50, 30, 0.75); /* Voile vert sombre */
+    padding: 40px 20px 20px 20px;
 }
 
-/* Style du Logo (Uniquement le logo, sans cadre ni fond blanc) */
-.site-logo {
-    width: auto;
-    max-width: 260px;
+.logo {
+    max-width: 180px;
     height: auto;
-    max-height: 160px;
-    object-fit: contain;
-    background-color: transparent;
-    padding: 0;
-    border: none;
-    box-shadow: none;
-    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.6));
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.2em;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+.hero-header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
 }
 
-header p {
-    margin: 5px 0;
-    font-size: 1.1em;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+.hero-header h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 5px;
 }
 
-header p.sub-title {
-    font-size: 0.95em;
+.statut {
+    font-size: 0.9rem;
+    font-style: italic;
     opacity: 0.9;
+    margin-bottom: 25px;
 }
 
-/* Menu de navigation dans le header */
-header nav ul {
+/* Navigation */
+.main-nav ul {
     list-style: none;
-    padding: 0;
-    margin: 25px 0 0 0;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
 }
 
-header nav ul li a {
-    color: #f4d03f; /* Jaune or */
+.main-nav a {
+    color: #ffd700; /* Couleur dorée */
     text-decoration: none;
-    font-weight: bold;
-    padding: 8px 14px;
-    border-radius: 4px;
+    font-weight: 600;
+    padding: 8px 16px;
     background-color: rgba(0, 0, 0, 0.4);
-    transition: background-color 0.3s, color 0.3s, transform 0.2s;
-    display: inline-block;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-header nav ul li a:hover {
-    background-color: #f4d03f;
-    color: #1b4d3e;
-    transform: translateY(-2px);
+.main-nav a:hover, .main-nav a.active {
+    background-color: #2e7d32;
+    color: #ffffff;
 }
 
-/* Conteneurs des sections */
-section {
-    max-width: 1000px;
+/* Structure du contenu */
+.main-content {
+    max-width: 1100px;
     margin: 30px auto;
+    padding: 0 20px;
+}
+
+.card-section {
     background: #ffffff;
-    padding: 25px 35px;
+    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-h2 {
-    color: #1b4d3e;
-    border-bottom: 3px solid #f4d03f;
-    padding-bottom: 8px;
-    margin-top: 0;
+.card-section h2 {
+    color: #1b5e20;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
 }
 
-h3 {
-    color: #2c3e50;
+.title-underline {
+    width: 100%;
+    height: 3px;
+    background-color: #fbc02d;
+    margin-bottom: 20px;
 }
 
-ul {
-    padding-left: 20px;
+/* Grille d'activités */
+.grid-activites {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
 }
 
-li {
+.carte-activite {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carte-activite:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.carte-activite img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.contenu-activite {
+    padding: 20px;
+}
+
+.badge-domaine {
+    display: inline-block;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
     margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.carte-activite h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.date-lieu {
+    font-size: 0.85rem;
+    color: #777777;
+    margin-bottom: 12px;
+}
+
+.carte-activite p {
+    font-size: 0.95rem;
+    color: #555555;
 }
 
 /* Pied de page */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #1b4d3e;
+    background-color: #1b5e20;
     color: #ffffff;
     margin-top: 40px;
 }
