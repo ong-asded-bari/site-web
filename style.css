@@ -20,7 +20,6 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Alignement du logo et des titres */
 .header-branding {
     display: flex;
     flex-direction: column;
@@ -31,7 +30,6 @@ header {
     margin: 0 auto;
 }
 
-/* Style du Logo */
 .site-logo {
     width: auto;
     max-width: 260px;
@@ -63,7 +61,6 @@ header p.sub-title {
     opacity: 0.9;
 }
 
-/* Menu de navigation dans le header */
 header nav ul {
     list-style: none;
     padding: 0;
@@ -91,7 +88,7 @@ header nav ul li a:hover {
     transform: translateY(-2px);
 }
 
-/* Conteneurs des sections */
+/* Sections du site */
 section {
     max-width: 1000px;
     margin: 30px auto;
@@ -120,14 +117,14 @@ li {
     margin-bottom: 10px;
 }
 
-/* Style des Cartes d'Activités */
+/* Cartes d'Activités */
 .activity-card {
-    background-color: #fafafa;
+    background-color: #ffffff;
     border-left: 4px solid #1b4d3e;
     padding: 20px;
     margin-bottom: 30px;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .activity-card h3 {
@@ -136,42 +133,45 @@ li {
 }
 
 .activity-card h4 {
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 25px;
+    margin-bottom: 15px;
     color: #2c3e50;
     font-size: 1.05em;
 }
 
+/* IMAGE PRINCIPALE (Affiche / Une) - Taille parfaitement ajustée */
 .activity-image {
     width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
-    margin-top: 15px;
+    max-width: 550px; /* Empêche l'image de devenir géante */
+    max-height: 400px; /* Limite la hauteur pour qu'elle s'affiche entière */
+    object-fit: contain; /* Affiche l'image entière sans la couper */
+    border-radius: 8px;
+    margin: 20px auto;
     display: block;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: #f9f9f9;
 }
 
-/* Grille de la Galerie Photo */
+/* Galerie Photo des activités */
 .activity-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 12px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .activity-gallery img {
     width: 100%;
-    height: 130px;
+    height: 120px;
     object-fit: cover;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .activity-gallery img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Pied de page */
@@ -181,4 +181,26 @@ footer {
     background-color: #1b4d3e;
     color: #ffffff;
     margin-top: 40px;
+}
+
+/* Mobile & Petits écrans */
+@media (max-width: 600px) {
+    section {
+        padding: 15px;
+        margin: 15px 10px;
+    }
+
+    .activity-image {
+        max-width: 100%;
+        max-height: 300px;
+    }
+
+    .activity-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .activity-gallery img {
+        height: 100px;
+    }
 }
