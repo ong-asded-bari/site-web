@@ -123,8 +123,8 @@ li {
     border-left: 4px solid #1b4d3e;
     padding: 20px;
     margin-bottom: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .activity-card h3 {
@@ -133,45 +133,46 @@ li {
 }
 
 .activity-card h4 {
-    margin-top: 25px;
+    margin-top: 20px;
     margin-bottom: 15px;
     color: #2c3e50;
-    font-size: 1.05em;
+    font-size: 1em;
 }
 
-/* IMAGE PRINCIPALE (Affiche / Une) - Taille parfaitement ajustée */
+/* IMAGE PRINCIPALE (Affiche/Une) - Compacte et propre */
 .activity-image {
     width: 100%;
-    max-width: 550px; /* Empêche l'image de devenir géante */
-    max-height: 400px; /* Limite la hauteur pour qu'elle s'affiche entière */
-    object-fit: contain; /* Affiche l'image entière sans la couper */
+    max-width: 380px;
+    max-height: 280px;
+    object-fit: contain;
     border-radius: 8px;
-    margin: 20px auto;
+    margin: 15px auto;
     display: block;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fafafa;
 }
 
-/* Galerie Photo des activités */
+/* GALERIE PHOTO - Grille Moderne 4 colonnes (4x4) */
 .activity-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(4, 1fr); /* Exactly 4 columns */
+    gap: 10px;
     margin-top: 15px;
 }
 
 .activity-gallery img {
     width: 100%;
-    height: 120px;
+    height: 100px;
     object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
 }
 
 .activity-gallery img:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.04);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Pied de page */
@@ -183,24 +184,24 @@ footer {
     margin-top: 40px;
 }
 
-/* Mobile & Petits écrans */
+/* Adaptation Mobile (Téléphones) */
 @media (max-width: 600px) {
     section {
         padding: 15px;
         margin: 15px 10px;
     }
 
-    .activity-image {
-        max-width: 100%;
-        max-height: 300px;
-    }
-
     .activity-gallery {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur écran mobile */
         gap: 8px;
     }
 
     .activity-gallery img {
-        height: 100px;
+        height: 90px;
+    }
+
+    .activity-image {
+        max-width: 100%;
+        max-height: 220px;
     }
 }
