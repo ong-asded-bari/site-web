@@ -3,12 +3,12 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f7f6; /* Fond clair de la page */
+    background-color: #f4f7f6;
     color: #333;
     line-height: 1.6;
 }
 
-/* En-tête / Bannière principale (L'image d'arrière-plan est UNIQUEMENT ici) */
+/* En-tête / Bannière principale */
 header {
     background: linear-gradient(rgba(27, 77, 62, 0.82), rgba(27, 77, 62, 0.82)), url('arriere-plan.jpeg');
     background-size: cover;
@@ -31,7 +31,7 @@ header {
     margin: 0 auto;
 }
 
-/* Style du Logo (Uniquement le logo, sans cadre ni fond blanc) */
+/* Style du Logo */
 .site-logo {
     width: auto;
     max-width: 260px;
@@ -75,7 +75,7 @@ header nav ul {
 }
 
 header nav ul li a {
-    color: #f4d03f; /* Jaune or */
+    color: #f4d03f;
     text-decoration: none;
     font-weight: bold;
     padding: 8px 14px;
@@ -118,6 +118,60 @@ ul {
 
 li {
     margin-bottom: 10px;
+}
+
+/* Style des Cartes d'Activités */
+.activity-card {
+    background-color: #fafafa;
+    border-left: 4px solid #1b4d3e;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.activity-card h3 {
+    margin-top: 0;
+    color: #1b4d3e;
+}
+
+.activity-card h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-size: 1.05em;
+}
+
+.activity-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 15px;
+    display: block;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Grille de la Galerie Photo */
+.activity-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.activity-gallery img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.activity-gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 /* Pied de page */
